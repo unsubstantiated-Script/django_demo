@@ -2,6 +2,7 @@ from django.urls import path
 
 from . import views
 
+# app_name differentiates between apps that might be clustered together on this page
 app_name = 'polls'
 urlpatterns = [
     path('', views.index, name='index'),
