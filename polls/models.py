@@ -18,6 +18,7 @@ class Question(models.Model):
 
 
 class Choice(models.Model):
+    # Connecting the two tables with this FK. If the FK deletes the related data in this table is also removed
     question = models.ForeignKey(Question, on_delete=models.CASCADE)
     choice_text = models.CharField(max_length=200)
     votes = models.IntegerField(default=0)
